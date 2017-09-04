@@ -58,6 +58,6 @@ app.use("/stadiums", stadiumRoutes);
 app.use("/stadiums/:id/comments", commentRoutes);
 
 //App running on server
-var port = process.env.PORT || 3030;
+var port = process.env.PORT || 3000;
 app.listen(port);
 console.log('Listening on port ' + port + '...');
