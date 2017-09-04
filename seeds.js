@@ -27,8 +27,8 @@ function seedDB(){
         //create a comment
         Comment.create(
           {
-          text: "This Place is great, but no Internet",
-          author: "Homer"
+          text: "Nice Stadium",
+          author: "Apurv"
         }, function(err, comment){
           if(err){
             console.log(err);

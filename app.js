@@ -22,7 +22,7 @@ var express = require("express"),
 
 
 
-mongoose.connect("mongodb://localhost/football_stadium", {useMongoClient: true});//mongoose connection
+mongoose.connect("mongodb://apurv:football@ds121494.mlab.com:21494/football_stadium", {useMongoClient: true});//mongoose connection
 app.use(bodyParser.urlencoded({extended: true}));
 
 //view engine set
@@ -58,6 +58,6 @@ app.use("/stadiums", stadiumRoutes);
 app.use("/stadiums/:id/comments", commentRoutes);
 
 //App running on server
-app.listen(3000, function(){
-  console.log("Football Stadium running on locahost:3000")
-});
+var port = process.env.PORT || 3030;
+app.listen(port);
+console.log('Listening on port ' + port + '...');
